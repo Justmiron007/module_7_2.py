@@ -3,11 +3,11 @@ from pprint import pprint
 
 def custom_write(file_name, strings):
     strings_positions = {}
-    with open(file_name, 'w', encoding='utf-8') as file:
-        for i in strings:
-            position = file.tell()
-            file.write(i + '\n')
-            strings_positions[(len(strings_positions) + 1, position)] = i
+    file = open(file_name, 'w', encoding='utf-8')
+    for i in strings:
+        position = file.tell()
+        file.write(i + '\n')
+        strings_positions[(len(strings_positions) + 1, position)] = i
     return strings_positions
 
 
