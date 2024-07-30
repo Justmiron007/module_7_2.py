@@ -9,6 +9,7 @@ def custom_write(file_name, strings):
         file.write(i + '\n')
         strings_positions[(len(strings_positions) + 1, position)] = i
     return strings_positions
+    file.close()
 
 
 info = [
